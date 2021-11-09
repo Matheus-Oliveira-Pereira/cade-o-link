@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-items: center;
-    justify-content: space-between;
     min-height: 100vh;
     padding: 7rem;
     
@@ -50,11 +49,26 @@
     &__content{
         display: flex;
         flex-wrap: wrap;
-        gap: 10rem;
+        gap: 7rem;
         width: 100%;
         flex-direction: row;
         justify-content: flex-start;  
-        align-items:flex-start;
+        align-items:stretch;
+    }
+
+    &__add{
+
+        &--card{
+            background-color: #fff;
+            width: 18rem;
+            display: flex;
+            
+        }
+
+        &--img{
+            height: 20rem;
+        }
+
     }
   
   }
