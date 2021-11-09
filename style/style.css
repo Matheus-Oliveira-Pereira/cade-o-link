@@ -88,6 +88,8 @@ body {
   letter-spacing: 0.2rem; }
   .heading-secundary--smaller {
     font-size: 1.5rem; }
+  .heading-secundary--pink {
+    color: #ffa8c2; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -240,6 +242,83 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.show-modal {
+  border: none;
+  cursor: pointer; }
+
+.show-modalPolicy {
+  border: none;
+  cursor: pointer; }
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none; }
+
+.close-modalPolicy {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none; }
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none; }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; }
+
+.overlayPolicy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; }
+
+.modalPolicy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+
 .login {
   position: relative;
   display: flex;
@@ -289,8 +368,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-items: center;
-  justify-content: space-between;
-  height: 120vh;
+  min-height: 100vh;
   padding: 7rem;
   background-image: linear-gradient(to right bottom, rgba(255, 124, 163, 0.8), rgba(252, 20, 89, 0.8)); }
   .home__body {
@@ -317,8 +395,14 @@ body {
   .home__content {
     display: flex;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 7rem;
     width: 100%;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start; }
+    align-items: stretch; }
+  .home__add--card {
+    background-color: #fff;
+    width: 18rem;
+    display: flex; }
+  .home__add--img {
+    height: 20rem; }
