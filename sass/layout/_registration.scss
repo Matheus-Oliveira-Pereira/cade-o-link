@@ -1,0 +1,47 @@
+
+.registration{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 120vh;
+  padding: 7rem;
+  
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-ligth, 0.8),
+    rgba($color-primary-dark, 0.8) /* o 0.8 fica responsavel pela opacidade*/
+  );
+
+  &__logobox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+
+  }
+
+  &__logo{
+    height: 7rem; 
+  }
+
+  &__login{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-tertiary-dark;
+  }
+
+  &__button--group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__logos{
+    height: 2rem;
+  }
+
+}

@@ -1,0 +1,105 @@
+.button {
+    &,
+    &:link,               /*pseudo-class são subclasses que definer a ancora, link transforma em um botão*/
+    &:visited {
+      /* visited - significa como o link  vai ficar visualmente após ser clicado*/
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 2rem;
+      min-width: 25rem;
+      border-radius: 10rem;
+      transition: all 0.2s;
+      position: relative;
+      font-size: $default-font-size;
+  
+      //Change for the button elemente
+      border: none;
+      cursor: pointer;
+    }
+
+    &--center{
+      justify-content: center;
+    }
+    
+    &:hover {
+      transform: translateY(-3px);
+      /*o eixo y se move para baixo, então para subir tem que ser numero negativo */
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6); /* aumenta no eixo x*/
+        opacity: 0;
+      }
+    }
+  
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  
+    &--white {
+      background-color: $color-white;
+      color: $color-grey-dark;
+  
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  
+    &--green {
+      background-color: $color-primary;
+      color: $color-white;
+  
+      &::after {
+        background-color: $color-primary;
+      }
+    }
+  
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; /* define em qual camada vai estar, como esta negativo sera enviado para tras*/
+      transition: all 0.4s;
+    }
+  
+    &--animated {
+      animation: moveInBotton 1s ease-out 0.75s; /* 0.75 seg é um delay*/
+      animation-fill-mode: backwards; /* isso faz com que o objeto fique atras até o o momento da animação*/
+    }
+  }
+  
+  .btn-text {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $color-primary;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 0.1rem solid $color-primary;
+      padding: 0.3rem;
+      transition: all 0.2s;
+    }
+  
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
+      transform: translateY(-0.2rem);
+    }
+  
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+    }
+  }

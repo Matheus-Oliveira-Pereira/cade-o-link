@@ -1,0 +1,17 @@
+{
+  "name": "cadeolink",
+  "version": "1.0.0",
+  "description": "Website para armazenamento de links",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style/style.css -w"
+  },
+  "author": "Matheus",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

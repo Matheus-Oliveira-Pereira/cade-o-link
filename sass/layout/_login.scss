@@ -1,0 +1,32 @@
+.login {
+    
+    position: relative; //faz que a box se torne uma referencia para uma possivel postion:absolute
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 91vh;
+    
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-ligth, 0.8),
+      rgba($color-primary-dark, 0.8) /* o 0.8 fica responsavel pela opacidade*/
+    );
+
+
+   
+  
+  
+
+
+    &__logobox {
+      position: absolute; // position absolute faz que fixe fixo no position relative
+      top: 4rem; //ditancia que vai ficar de cima pra baixo
+      left: 4rem; //distancia que vai ficar da esquerda para direita
+    }
+  
+    &__logo {
+      height: 7rem;
+    }
+  
+  }

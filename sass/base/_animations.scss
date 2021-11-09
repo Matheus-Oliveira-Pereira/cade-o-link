@@ -1,0 +1,27 @@
+@keyframes moveInLeft {
+    0% {
+      opacity: 0; /*opacidade em 0 pra começar invisivel*/
+      transform: translateX(-10rem); /*translatex para animar no eixo x*/
+    }
+    80% {
+      transform: translateX(1rem);
+    }
+    100% {
+      opacity: 1; /*opacidade em 1 para ficar visivel*/
+      transform: translate(0); /*tralate 0 para imagem ficar na posição normal*/
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0; /*opacidade em 0 pra começar invisivel*/
+      transform: translateX(10rem); /*translatex para animar no eixo x*/
+    }
+    80% {
+      transform: translateX(-1rem);
+    }
+    100% {
+      opacity: 1; /*opacidade em 1 para ficar visivel*/
+      transform: translate(0); /*tralate 0 para imagem ficar na posição normal*/
+    }
+  }

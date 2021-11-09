@@ -1,0 +1,73 @@
+body {  
+  font-family: "lato", sans-serif;
+  font-weight: 400; /*Peso da fonte, tipo negrito*/
+  /*font-size: 16px;*/
+  line-height: 1.7; /* basicamente o tamnho maximo que uma letra pode ocupar, mas se ela nao ocupar o espaço continua fixo*/
+  color: $color-grey-dark;
+
+  font-size: 1.6rem;
+}
+
+.heading-logo{
+  color: $color-white;
+  text-transform: uppercase;
+}
+  
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* conserta o tremor da animação*/
+  
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem; /*espaçamento entre as letras*/
+    animation-name: moveInLeft; /* para chamar a animação*/
+    animation-duration: 1s; /* define o tempo da animação*/
+    animation-timing-function: ease-out;
+
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    animation-name: moveInRight; /* para chamar a animação*/
+    animation-duration: 1s; /* define o tempo da animação*/
+    animation-timing-function: ease-out;
+  }
+}
+  
+  .heading-secundary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-white;
+    letter-spacing: 0.2rem;
+    
+    &--smaller{
+      font-size: 1.5rem;
+    }
+
+  }
+  
+  .heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .heading-quartiary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .paragraph {
+    font-size: $default-font-size;
+  
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }

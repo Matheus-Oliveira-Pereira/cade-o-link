@@ -1,0 +1,324 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /*opacidade em 0 pra começar invisivel*/
+    transform: translateX(-10rem);
+    /*translatex para animar no eixo x*/ }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    /*opacidade em 1 para ficar visivel*/
+    transform: translate(0);
+    /*tralate 0 para imagem ficar na posição normal*/ } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /*opacidade em 0 pra começar invisivel*/
+    transform: translateX(10rem);
+    /*translatex para animar no eixo x*/ }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    /*opacidade em 1 para ficar visivel*/
+    transform: translate(0);
+    /*tralate 0 para imagem ficar na posição normal*/ } }
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  /*Peso da fonte, tipo negrito*/
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  /* basicamente o tamnho maximo que uma letra pode ocupar, mas se ela nao ocupar o espaço continua fixo*/
+  color: #777;
+  font-size: 1.6rem; }
+
+.heading-logo {
+  color: #fff;
+  text-transform: uppercase; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* conserta o tremor da animação*/ }
+  .heading-primary--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    /*espaçamento entre as letras*/
+    animation-name: moveInLeft;
+    /* para chamar a animação*/
+    animation-duration: 1s;
+    /* define o tempo da animação*/
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    animation-name: moveInRight;
+    /* para chamar a animação*/
+    animation-duration: 1s;
+    /* define o tempo da animação*/
+    animation-timing-function: ease-out; }
+
+.heading-secundary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.2rem; }
+  .heading-secundary--smaller {
+    font-size: 1.5rem; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.heading-quartiary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-margin-botton-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-botton-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-botton-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.form {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    width: 100%;
+    color: inherit;
+    transition: all 0.3s; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 0.3rem solid #ffa8c2; }
+    .form__input:focus:invalid {
+      border-bottom: 0.3rem solid #ff7730; }
+    .form__input::-webkit-input-placeholder {
+      color: #999; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.1rem;
+    display: block;
+    transition: all 0.3s;
+    align-self: flex-start; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+
+.button, .button:link, .button:visited {
+  /* visited - significa como o link  vai ficar visualmente após ser clicado*/
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  min-width: 25rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.button--center {
+  justify-content: center; }
+
+.button:hover {
+  transform: translateY(-3px);
+  /*o eixo y se move para baixo, então para subir tem que ser numero negativo */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    /* aumenta no eixo x*/
+    opacity: 0; }
+
+.button:active, .button:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.button--white {
+  background-color: #fff;
+  color: #777; }
+  .button--white::after {
+    background-color: #fff; }
+
+.button--green {
+  background-color: #ffa8c2;
+  color: #fff; }
+  .button--green::after {
+    background-color: #ffa8c2; }
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* define em qual camada vai estar, como esta negativo sera enviado para tras*/
+  transition: all 0.4s; }
+
+.button--animated {
+  animation: moveInBotton 1s ease-out 0.75s;
+  /* 0.75 seg é um delay*/
+  animation-fill-mode: backwards;
+  /* isso faz com que o objeto fique atras até o o momento da animação*/ }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #ffa8c2;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #ffa8c2;
+  padding: 0.3rem;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #ffa8c2;
+  color: #fff;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.2rem); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 91vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 124, 163, 0.8), rgba(252, 20, 89, 0.8)); }
+  .login__logobox {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .login__logo {
+    height: 7rem; }
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 120vh;
+  padding: 7rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 124, 163, 0.8), rgba(252, 20, 89, 0.8)); }
+  .registration__logobox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30vw; }
+  .registration__logo {
+    height: 7rem; }
+  .registration__login {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #5643fa; }
+  .registration__button--group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem; }
+  .registration__logos {
+    height: 2rem; }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  justify-content: space-between;
+  height: 120vh;
+  padding: 7rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 124, 163, 0.8), rgba(252, 20, 89, 0.8)); }
+  .home__body {
+    padding: 0; }
+  .home__logobox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30vw; }
+  .home__logo {
+    height: 7rem; }
+  .home__login {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #5643fa; }
+  .home__button--group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem; }
+  .home__logos {
+    height: 2rem; }
+  .home__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
