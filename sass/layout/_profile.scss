@@ -1,0 +1,16 @@
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+  padding: 7rem;
+  
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-ligth, 0.8),
+    rgba($color-primary-dark, 0.8) /* o 0.8 fica responsavel pela opacidade*/
+  );
+}
