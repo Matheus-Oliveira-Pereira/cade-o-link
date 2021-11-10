@@ -41,9 +41,36 @@
       Perfil
     </h1>
 
-    <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
-      data-holder-rendered="true">
+    <div class="profile__container">
+
+      <div class="profile__edit_picture_container">
+        <img class="rounded-circle profile__picture" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
+          data-holder-rendered="true">
+        <img class="profile__icon" alt="Edit icon" src="assets/imagem.png">
+      </div>
 
 
+        <form action="#" class="form">             
+          <input
+            type="text"
+            class="form__input"
+            placeholder="Beatriz Schwartz"
+            id="name"
+            required
+          />
+
+          <label for="title" class="form__label">Editar Nome</label>
+
+          <input
+            type="password"
+            class="form__input"
+            placeholder="Digite sua nova senha"
+            id="password"
+            required
+          />
+          <label for="link" class="form__label">Mudar de senha</label>
+          <button class="button button--center button--white">Salvar Alterações</button>
+      </form>
+    </div>
   </body>
 </html>
