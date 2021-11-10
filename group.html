@@ -44,7 +44,7 @@
         Receitas
       </h1>
       <div>
-        <button type="button" class="button button--white button--center" onclick="toggleModal()">
+        <button type="button" class="button button--white button--center show-modalForm" onclick="toggleModal()">
           Novo link
         </button>
       </div>
@@ -65,6 +65,14 @@
     </ul>
 
 
+
+
+  <div class="modalForm hidden">
+    <button class="close-modalForm">&times;</button>
+    <div class="u-margin-botton-medium ">
+      <h1 class="heading-secundary heading-secundary">NOVO LINK</h1>
+    </div>
+
     <form action="#" class="form">             
       <input
         type="text"
@@ -82,8 +90,13 @@
         required
       />
       <label for="link" class="form__label">Link</label>
-      <button class="button button--center button--white">Adicionar</button>
+      <button class="button button--center button--white newLi">Adicionar</button>
   </form>
+    
+  </div>
+  <div class="overlayForm hidden"></div>
+
+  
 
 
     <script src="group.js"></script>

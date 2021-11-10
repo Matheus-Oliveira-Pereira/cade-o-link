@@ -16,6 +16,12 @@
       width: 100%;
       color: inherit;
       transition: all 0.3s;
+      
+
+
+      &--Pink{
+        background-color: rgba($color-primary, 0.5);
+      }
   
       &:focus {
         outline: none;
