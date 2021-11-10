@@ -1,17 +1,28 @@
 'use strict';
 
-const linksDiv = document.querySelector("group__links");
 const newLi = document.querySelector(".newLi")
 
-
 const createLink = () => {
-  const li = document.createElement("li")
-  const text = document.createElement("p")
+  const linksUl = document.querySelector(".group__links");
+
+  const li = document.createElement("li");
+  const text = document.createElement("p");
+  const titleValue = document.querySelector(".title_input").value;
+  const linkValue = document.querySelector(".link_input").value;
+
+  const titleTextNode = document.createTextNode(titleValue);
+  text.appendChild(titleTextNode)
+
   text.classList.add("group__links--text")
   li.classList.add("group__links--link")
   li.appendChild(text)
-  linksDiv.appendChild(li)
+  linksUl.appendChild(li)
+
+  linksUl.innerHTML;
+
+  closeModalForm();
 }
+
 
 newLi.addEventListener('click', createLink)
 
