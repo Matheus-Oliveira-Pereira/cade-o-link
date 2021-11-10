@@ -13,4 +13,42 @@
     rgba($color-primary-ligth, 0.8),
     rgba($color-primary-dark, 0.8) /* o 0.8 fica responsavel pela opacidade*/
   );
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__edit_picture_container{
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;  
+  }
+
+  &__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: $color-white;
+    text-transform: uppercase;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &__edit_picture_container:hover &__picture{
+    opacity: 0.3;
+  }
+
+  &__edit_picture_container:hover &__icon{
+    opacity: 1;
+  }
 }

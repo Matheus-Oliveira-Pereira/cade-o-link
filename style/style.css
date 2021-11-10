@@ -494,3 +494,31 @@ body {
   width: 100%;
   padding: 7rem;
   background-image: linear-gradient(to right bottom, rgba(255, 124, 163, 0.8), rgba(252, 20, 89, 0.8)); }
+  .profile__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly; }
+  .profile__edit_picture_container {
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer; }
+  .profile__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-transform: uppercase;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .profile__edit_picture_container:hover .profile__picture {
+    opacity: 0.3; }
+  .profile__edit_picture_container:hover .profile__icon {
+    opacity: 1; }
